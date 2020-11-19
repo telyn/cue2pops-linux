@@ -2,7 +2,7 @@ build:
   image: telyn/debhelper:buster
   script:
     - apt-get update -y
-    - mk-build-deps -i debian/control
+    - mk-build-deps -i -r debian/control
     - dpkg-buildpackage -us -uc
     - mv ../*.deb .
   artifacts:
