@@ -8,7 +8,8 @@ CFLAGS_DEBUG = $(CFLAGS) -O0 -g -DDEBUG
 
 TARGET = cue2pops
 
-INSTALL_DIR = /usr/local/bin
+INSTALL_DIR = $(DESTDIR)
+INSTALL_DIR ?= /usr/local/bin
 
 RM = rm
 
@@ -27,5 +28,5 @@ install: cue2pops
 	$(CP) $(TARGET) $(INSTALL_DIR)
 
 clean:
-	$(RM) $(TARGET)
+	$(RM) -f $(TARGET)
 

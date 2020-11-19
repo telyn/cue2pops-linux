@@ -1,0 +1,9 @@
+build:
+  image: debian:stable
+  script:
+    - apt -y update && apt -y install devscripts
+    - mk-build-debs -i debian/control
+    - debuild
+    - mv ../*.deb .
+  artifacts:
+    - path: "*.deb"

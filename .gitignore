@@ -1,0 +1,7 @@
+cue2pops
+debian/cue2pops/
+debian/*.substvars
+*.o
+debian/.debhelper
+debian/debhelper-build-stamp
+debian/files

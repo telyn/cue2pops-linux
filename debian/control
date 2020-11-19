@@ -1,0 +1,17 @@
+Source: cue2pops
+Section: unknown
+Priority: optional
+Maintainer: telyn <telyn@debian>
+Build-Depends: debhelper (>= 11), make, gcc
+Standards-Version: 4.1.3
+Homepage: https://github.com/makefu/cue2pops-linux
+#Vcs-Browser: https://salsa.debian.org/debian/cue2pops
+#Vcs-Git: https://salsa.debian.org/debian/cue2pops.git
+
+Package: cue2pops
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: cue2pops-linux built for debian
+ cue2pops is a tool used to convert cue/bin format images of Playstation 1 games
+ into the format used by the POPS emulator - the most functional emulator running
+ on the PS2.
