@@ -6,4 +6,5 @@ build:
     - dpkg-buildpackage -us -uc
     - mv ../*.deb .
   artifacts:
-    - path: "*.deb"
+    paths:
+      - "*.deb"
