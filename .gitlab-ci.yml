@@ -1,9 +1,9 @@
 build:
-  image: debian:stable
+  image: telyn/debhelper:buster
   script:
-    - apt -y update && apt -y install devscripts
-    - mk-build-debs -i debian/control
-    - debuild
+    - apt-get update -y
+    - mk-build-deps -i debian/control
+    - dpkg-buildpackage -us -uc
     - mv ../*.deb .
   artifacts:
     - path: "*.deb"
